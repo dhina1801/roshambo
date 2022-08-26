@@ -4,32 +4,36 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <link rel="icon" href="./icons/favicon.png">
+        <link rel="stylesheet" href="./style.css">
+        <script src="./game.js" defer></script>
         <title>rock, papers, scissors</title>
     </head>
     <body>
-        <h1> ROCK PAPER SCISSORS</h1>
-        <style>
-            h1 {
-                font-size: 64px;
-                text-align: center;
-                color: yellowgreen;
-            }
-            div {
-                text-align: center;
-                font-size: 16px;
-            }
-            code {
-                background-color: grey;
-                border: 2px black;
-                border-radius: 2px;
-                padding: 0 4px;
-            }
-        </style>
-        <script src="./script.js"></script>
-        <div>
-            <p> To play the game press <code>Ctrl</code>+<code>Shift</code>+<code>I</code> in your keyboard</p>
-            <p> which opens the console panel in your Chrome Dev Tools</p>
-            <p> then type <code>playGame();</code> on your console to play</p>
+        <h1> ROCK, PAPER AND SCISSORS</h1>
+        <div class="wpncont">
+            <p>Achieve 5 points to win the game</p>
+            <div id="btncont" >
+                <img id="rock" src="./icons/rock.png" alt="rock" style="height: 100px;" style="width: auto;">
+                <img id="paper" src="./icons/paper.png" alt="paper" style="height: 100px;" style="width: auto;">
+                <img id="scissors" src="./icons/scissors.png" alt="scissors" style="height: 100px;" style="width: auto;">
+            </div>
+        </div>
+        <div class="scoreinfo">
+            <div class="score">
+                <div id="player">0</div>-
+                <div id="computer">0</div>
+            </div>
+            <div class="scorecmnt"><div class="winner">Let's Play! Choose any weapon above</div ><div class="comment"></div></div>
+            <div class="icons" >
+                <div><img src="./icons/unknown.png" id="player" style="height: 100px;" style="width: auto;"><div style="text-align: center;">YOU</div></div>
+                <div><img src="./icons/unknown.png" id="computer" style="height: 100px;" style="width: auto;"><div style="text-align: center;">COMPUTER</div></div>
+            </div>
+        </div>
+        <div class="popup">
+            <img alt="winner" src="" style="height: 100px;" width="100px">
+            <div class="win" style="font-size: 24px;"></div>
+            <div class="buttons"><button class="restart" onclick="restartGame()"> restart</button> <button onclick="closepopup();">Cancel</button></div>
         </div>
     </body>
 </html>

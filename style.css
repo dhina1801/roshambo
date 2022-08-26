@@ -1,0 +1,102 @@
+*{
+    color: rgb(248, 255, 152);
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body {
+    margin: 0;
+    background-image: url(./icons/space.jpg);
+    background-size: cover;
+}
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color: rgb(235, 220, 10);
+    font-weight: bolder;
+}
+p.comment {
+    margin: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+.wpncont {
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.wpncont #btncont {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+#rock:hover,#paper:hover,#scissors:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.score {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 48px;
+    font-weight: 900;
+    color: rgb(47, 100, 47);
+}
+.score #player,.score #computer {
+    color: rgb(47, 100, 47);
+}
+.scoreinfo .scorecmnt {
+    font-size: 28px;
+    text-align: center;
+}
+.scoreinfo .icons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.popup {
+    width: 40%;
+    height: auto;
+    background: rgb(9, 10, 24);
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 40px;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.gameOver {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.buttons button {
+    color: rgb(40, 80, 39);
+    background-color: antiquewhite;
+    font-size: 24px;
+    border: 4px rgb(40, 80, 39);
+    border-radius: 4px;
+    cursor: pointer;
+}

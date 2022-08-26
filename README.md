@@ -1,2 +1,6 @@
 # roshambo
-Can be played only using using console in Dev tools
+from this exercise I've learned,
+    -How to build a popup window.
+    -How to build a function.
+    -How to select element from HTML.
+    -How to change the text content in HTML element.
