@@ -13,7 +13,7 @@ function getComputerChoice() {
             break;
     }
 }
-// for game
+// Single round
 function playRound(playerSelection,computerSelection,winner) {
     if (playerSelection === computerSelection) {
         winner = 'It\'s a tie';
@@ -55,17 +55,8 @@ const wintxt = document.querySelector('.popup .win');
 // For Initialization of variables
 let playerScore = 0;
 let computerScore = 0;
-// start the game
 let playerSelection;
 buttons = document.querySelectorAll('#btncont img');
-buttons.forEach((img) =>{
-    img.addEventListener('click', () => {
-        // this assigns the value for the player's weapon
-        playerSelection = img.id;
-        if ((playerScore === 5) || (computerScore === 5)) gameOver();
-        else game();
-    });
-});
 //game
 function game() {
     let computerSelection = getComputerChoice();
@@ -108,3 +99,13 @@ function restartGame() {
     comment.style.color = 'rgb(248, 255, 152)';
     closepopup();
 }
+// starts the game by clicking the weapons
+buttons.forEach((img) =>{
+    img.addEventListener('click', () => {
+        // this assigns the value for the player's weapon
+        playerSelection = img.id;
+        if ((playerScore >= 5) || (computerScore >= 5)) gameOver(); // run when player presses the cancel button, so that not to play further.
+        else game();
+        if ((playerScore >= 5) || (computerScore >= 5)) gameOver();
+    });
+});
