@@ -5,4 +5,4 @@ from this exercise I've learned,
     * How to select element from HTML.
     * How to change the text content in HTML element.
 
-[live preview] (https://dhina1801.github.io/roshambo/) 
+[live preview](https://dhina1801.github.io/roshambo/) 
